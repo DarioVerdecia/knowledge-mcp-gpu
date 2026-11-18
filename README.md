@@ -140,4 +140,4 @@ npm run typecheck
 
 ## Licencia
 
-Pendiente de definir.
+[MIT](LICENSE) © 2026 Darío Verdecia López. La licencia cubre únicamente el código de este repositorio; el servidor original de devsinsight no se redistribuye aquí y se rige por sus propios términos.
