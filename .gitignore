@@ -1,0 +1,16 @@
+# Secretos y configuracion local
+.env
+
+# Entornos y dependencias
+.venv/
+venv/
+node_modules/
+__pycache__/
+
+# Modelo exportado y datos generados
+ov_model_cache/
+qdrant_storage/
+
+# Registros
+logs/
+*.log

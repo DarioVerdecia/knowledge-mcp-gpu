@@ -1,0 +1,17 @@
+# Se coloca junto al docker-compose.yml del proyecto original.
+# Docker Compose lo combina automaticamente con el archivo base.
+#
+# Hace dos cosas:
+#   1. Indica donde esta el servidor de embeddings por GPU (en el host).
+#   2. Monta tu carpeta de documentos en lugar de ./.docs
+#
+# Define DOCS_PATH en un archivo .env junto a este (ver .env.example).
+services:
+  mcp:
+    environment:
+      GPU_EMBEDDER_URL: "http://host.docker.internal:8090"
+    volumes:
+      - type: bind
+        source: ${DOCS_PATH:?Define DOCS_PATH en el archivo .env}
+        target: /app/.docs
+        read_only: true
